@@ -5,13 +5,13 @@ Summary:	GD::Dashboard Perl module - create JPEGs of meters and dials
 Summary(pl):	Modu³ Perla GD::Dashboard - tworzenie JPEG-ów z licznikami i zegarami
 Name:		perl-GD-Dashboard
 Version:	0.04
-Release:	1
+Release:	2
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-GD
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,7 +29,8 @@ do wy¶wietlania kluczowych informacji.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -47,6 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes readme
-%{perl_sitelib}/GD/Dashboard.pm
+%{perl_vendorlib}/GD/Dashboard.pm
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
