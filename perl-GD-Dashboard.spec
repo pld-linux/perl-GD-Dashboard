@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	GD
-%define		pnam	Dashboard
+%define	pdir	GD
+%define	pnam	Dashboard
 Summary:	GD::Dashboard Perl module - create JPEGs of meters and dials
 Summary(pl):	Modu³ Perla GD::Dashboard - tworzenie JPEG-ów z licznikami i zegarami
 Name:		perl-GD-Dashboard
