@@ -31,7 +31,7 @@ do wy¶wietlania kluczowych informacji.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
