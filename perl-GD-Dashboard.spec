@@ -2,7 +2,7 @@
 %define		pdir	GD
 %define		pnam	Dashboard
 Summary:	GD::Dashboard Perl module - create JPEGs of meters and dials
-Summary(pl):	Modu≥ Perla GD::Dashboard - tworzenie JPEG-Ûw z licznikami i zegarami
+Summary(pl.UTF-8):   Modu≈Ç Perla GD::Dashboard - tworzenie JPEG-√≥w z licznikami i zegarami
 Name:		perl-GD-Dashboard
 Version:	0.04
 Release:	3
@@ -22,10 +22,10 @@ The GD::Dashboard module aims at providing users with a quick and easy
 way to create dashboard or cockpit like JPGs to display key
 information.
 
-%description -l pl
-Modu≥ GD::Dashboard ma za zadanie dostarczenie szybkiego i ≥atwego
-sposobu na tworzenie desek rozdzielczych lub kokpitÛw z JPEG-ami
-do wy∂wietlania kluczowych informacji.
+%description -l pl.UTF-8
+Modu≈Ç GD::Dashboard ma za zadanie dostarczenie szybkiego i ≈Çatwego
+sposobu na tworzenie desek rozdzielczych lub kokpit√≥w z JPEG-ami
+do wy≈õwietlania kluczowych informacji.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
