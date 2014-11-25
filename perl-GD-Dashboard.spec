@@ -1,6 +1,6 @@
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	GD
 %define		pnam	Dashboard
+%include	/usr/lib/rpm/macros.perl
 Summary:	GD::Dashboard Perl module - create JPEGs of meters and dials
 Summary(pl.UTF-8):	Moduł Perla GD::Dashboard - tworzenie JPEG-ów z licznikami i zegarami
 Name:		perl-GD-Dashboard
@@ -11,8 +11,9 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	1875cf4b9aab046e8ff43c3096859c2b
-BuildRequires:	perl-devel >= 1:5.8.0
+URL:		http://search.cpan.org/dist/GD-Dashboard/
 BuildRequires:	perl-GD
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,8 +25,8 @@ information.
 
 %description -l pl.UTF-8
 Moduł GD::Dashboard ma za zadanie dostarczenie szybkiego i łatwego
-sposobu na tworzenie desek rozdzielczych lub kokpitów z JPEG-ami
-do wyświetlania kluczowych informacji.
+sposobu na tworzenie desek rozdzielczych lub kokpitów z JPEG-ami do
+wyświetlania kluczowych informacji.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -42,7 +43,7 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -p examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
